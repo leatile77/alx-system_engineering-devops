@@ -12,9 +12,17 @@ then
 echo "$j"
 i=$(( i + 1 ))
 echo "Hour: $i"
+
 else
 echo "$j"
 fi
 j=$(( j + 1 ))
 done
+
+done
+k=1
+while [ "$k" -le 59 ]
+do
+    echo "$k"
+    k=$(( k + 1 ))
 done
