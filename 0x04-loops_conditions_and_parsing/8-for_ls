@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays current directory's content as a list, with part before dash removed
+cd "$(dirname "$0")" || exit
+for file in *
+do
+name=$(echo "$file" | cut -d '-' -f 2-)
+echo "$name"
+done
