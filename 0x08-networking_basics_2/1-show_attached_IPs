@@ -1,0 +1,8 @@
+#!/bin/bash
+# This script displays all active IPv4 IPs on current machine
+if [ "$EUID" -ne 0 ]
+then
+    exit 1
+fi
+ipv4_addr=$(ip -4 addr show | awk '/inet/ {print $2}' | cut -d'/' -f1)
+echo "$ipv4_addr"
