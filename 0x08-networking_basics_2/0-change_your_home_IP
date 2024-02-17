@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script changes IP adress of localhost and facebook.com
 # localhost resolves to 127.0.0.2
 # facebook.com resollves to 8.8.8.8
