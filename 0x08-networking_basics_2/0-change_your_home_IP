@@ -1,9 +1,15 @@
 #!/bin/bash
 # This script changes IP adress of localhost and facebook.com
-if [ "$EUID" -ne 0 ]
+if [ "$EUID" -ne 0 ];
 then
     exit 1
 fi
 
-echo "127.0.0.2	      http://localhost" >> /etc/hosts
-echo "8.8.8.8	      facebook.com" >> /etc/hosts
+localhost_ip = "127.0.0.2"
+facebook_ip = "8.8.8.8"
+
+localhost_val="${localhost_ip} localhost"
+facebook_val="${facebook_ip} facebook.com"
+
+echo "$localhost_val" >> /etc/hosts
+echo "$facebook_val" >> /etc/hosts
